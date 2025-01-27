@@ -1,46 +1,53 @@
-# Eliza 🤖
+Got it! Here's the updated **Deep16z README** with the **languages** and **star history** sections removed. Clean and focused:
+
+---
+
+# Deep16z 🚀
 
 <div align="center">
-  <img src="./docs/static/img/eliza_banner.jpg" alt="Eliza Banner" width="100%" />
+  <img src="./docs/static/img/deep16z_banner.png" alt="Deep16z Banner" width="100%" />
 </div>
 
 <div align="center">
 
-📑 [Technical Report](https://arxiv.org/pdf/2501.06781) |  📖 [Documentation](https://elizaos.github.io/eliza/) | 🎯 [Examples](https://github.com/thejoven/awesome-eliza)
+📑 [Technical Report](#) |  📖 [Documentation](#) | 🎯 [Examples](#)
 
 </div>
 
-## 🌍 README Translations
-
-[中文说明](i18n/readme/README_CN.md) | [日本語の説明](i18n/readme/README_JA.md) | [한국어 설명](i18n/readme/README_KOR.md) | [Persian](i18n/readme/README_FA.md) | [Français](i18n/readme/README_FR.md) | [Português](i18n/readme/README_PTBR.md) | [Türkçe](i18n/readme/README_TR.md) | [Русский](i18n/readme/README_RU.md) | [Español](i18n/readme/README_ES.md) | [Italiano](i18n/readme/README_IT.md) | [ไทย](i18n/readme/README_TH.md) | [Deutsch](i18n/readme/README_DE.md) | [Tiếng Việt](i18n/readme/README_VI.md) | [עִברִית](i18n/readme/README_HE.md) | [Tagalog](i18n/readme/README_TG.md) | [Polski](i18n/readme/README_PL.md) | [Arabic](i18n/readme/README_AR.md) | [Hungarian](i18n/readme/README_HU.md) | [Srpski](i18n/readme/README_RS.md) | [Română](i18n/readme/README_RO.md) | [Nederlands](i18n/readme/README_NL.md) | [Ελληνικά](i18n/readme/README_GR.md)
+---
 
 ## 🚩 Overview
 
+**Deep16z** is a powerful AI agent framework built on top of **Eliza**, enhanced with **Deepseek** integration for advanced conversational capabilities. Whether you're building chatbots, autonomous agents, or document-based AI systems, Deep16z provides the tools and flexibility to create highly intelligent and responsive agents.
+
 <div align="center">
-  <img src="./docs/static/img/eliza_diagram.png" alt="Eliza Diagram" width="100%" />
+  <img src="./docs/static/img/deep16z_diagram.png" alt="Deep16z Diagram" width="100%" />
 </div>
+
+---
 
 ## ✨ Features
 
-- 🛠️ Full-featured Discord, Twitter and Telegram connectors
-- 🔗 Support for every model (Llama, Grok, OpenAI, Anthropic, Gemini, etc.)
-- 👥 Multi-agent and room support
-- 📚 Easily ingest and interact with your documents
-- 💾 Retrievable memory and document store
-- 🚀 Highly extensible - create your own actions and clients
-- 📦 Just works!
+- **🤖 Deepseek Integration**: Seamless connection with Deepseek for enhanced conversational intelligence.
+- **🛠️ Multi-Platform Support**: Full-featured Discord, Twitter, and Telegram connectors.
+- **🔗 Model Agnostic**: Works with any model (Llama, Grok, OpenAI, Anthropic, Gemini, etc.).
+- **👥 Multi-Agent Support**: Run multiple agents simultaneously with room-based interactions.
+- **📚 Document Interaction**: Easily ingest and interact with your documents for context-aware responses.
+- **💾 Retrievable Memory**: Persistent memory and document storage for long-term interactions.
+- **🚀 Extensible Architecture**: Create custom actions, clients, and plugins to tailor Deep16z to your needs.
+- **📦 Just Works**: Easy setup and deployment with minimal configuration.
 
-## Video Tutorials
-
-[AI Agent Dev School](https://www.youtube.com/watch?v=ArptLpQiKfI&list=PLx5pnFXdPTRzWla0RaOxALTSTnVq53fKL)
+---
 
 ## 🎯 Use Cases
 
-- 🤖 Chatbots
-- 🕵️ Autonomous Agents
-- 📈 Business Process Handling
-- 🎮 Video Game NPCs
-- 🧠 Trading
+- **🤖 Chatbots**: Build intelligent chatbots for customer support, entertainment, or personal use.
+- **🕵️ Autonomous Agents**: Create agents that can perform tasks autonomously.
+- **📈 Business Process Automation**: Automate workflows and business processes with AI.
+- **🎮 Video Game NPCs**: Design lifelike NPCs with advanced conversational abilities.
+- **🧠 Trading**: Develop AI-driven trading systems with real-time decision-making.
+
+---
 
 ## 🚀 Quick Start
 
@@ -52,141 +59,144 @@
 
 > **Note for Windows Users:** [WSL 2](https://learn.microsoft.com/en-us/windows/wsl/install-manual) is required.
 
+---
+
 ### Use the Starter (Recommended)
 
 ```bash
-git clone https://github.com/elizaos/eliza-starter.git
-cd eliza-starter
+git clone https://github.com/your-repo/deep16z-starter.git
+cd deep16z-starter
 cp .env.example .env
 pnpm i && pnpm build && pnpm start
 ```
 
-### Manually Start Eliza (Only recommended if you know what you are doing)
+---
 
-#### Checkout the latest release
+### Manually Start Deep16z
+
+#### Checkout the Latest Release
 
 ```bash
 # Clone the repository
-git clone https://github.com/elizaos/eliza.git
+git clone https://github.com/your-repo/deep16z.git
 
-# This project iterates fast, so we recommend checking out the latest release
+# Checkout the latest release
 git checkout $(git describe --tags --abbrev=0)
-# If the above doesn't checkout the latest release, this should work:
-# git checkout $(git describe --tags `git rev-list --tags --max-count=1`)
 ```
 
-#### Edit the .env file
+#### Edit the `.env` File
 
-Copy .env.example to .env and fill in the appropriate values.
+Copy `.env.example` to `.env` and fill in the appropriate values.
 
-```
+```bash
 cp .env.example .env
 ```
 
-Note: .env is optional. If you're planning to run multiple distinct agents, you can pass secrets through the character JSON
-
-#### Start Eliza
+#### Start Deep16z
 
 ```bash
 pnpm i
 pnpm build
 pnpm start
 
-# The project iterates fast, sometimes you need to clean the project if you are coming back to the project
+# Clean the project if needed
 pnpm clean
 ```
 
+---
+
 ### Interact via Browser
 
-Once the agent is running, you should see the message to run "pnpm start:client" at the end.
-
-Open another terminal, move to the same directory, run the command below, then follow the URL to chat with your agent.
+Once the agent is running, open another terminal and run:
 
 ```bash
 pnpm start:client
 ```
 
-Then read the [Documentation](https://elizaos.github.io/eliza/) to learn how to customize your Eliza.
+Follow the URL to chat with your Deep16z agent.
 
 ---
 
-### Automatically Start Eliza
+### Automatically Start Deep16z
 
-The start script provides an automated way to set up and run Eliza:
+Use the start script for automated setup:
 
 ```bash
 sh scripts/start.sh
 ```
 
-For detailed instructions on using the start script, including character management and troubleshooting, see our [Start Script Guide](./docs/docs/guides/start-script.md).
-
-> **Note**: The start script handles all dependencies, environment setup, and character management automatically.
+For detailed instructions, see our [Start Script Guide](./docs/docs/guides/start-script.md).
 
 ---
 
 ### Modify Character
 
-1. Open `packages/core/src/defaultCharacter.ts` to modify the default character. Uncomment and edit.
+1. Open `packages/core/src/defaultCharacter.ts` to modify the default character.
+2. Load custom characters with:
 
-2. To load custom characters:
-    - Use `pnpm start --characters="path/to/your/character.json"`
-    - Multiple character files can be loaded simultaneously
-3. Connect with X (Twitter)
-    - change `"clients": []` to `"clients": ["twitter"]` in the character file to connect with X
+```bash
+pnpm start --characters="path/to/your/character.json"
+```
+
+3. Connect with X (Twitter) by changing `"clients": []` to `"clients": ["twitter"]` in the character file.
 
 ---
 
-#### Additional Requirements
+### Additional Requirements
 
-You may need to install Sharp. If you see an error when starting up, try installing it with the following command:
+If you encounter errors, install Sharp:
 
-```
+```bash
 pnpm install --include=optional sharp
 ```
 
 ---
 
-### Start Eliza with Gitpod
+### Start Deep16z with Gitpod
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/elizaos/eliza/tree/main)
-
----
-
-### Deploy Eliza in one click 
-
-Use [Fleek](https://fleek.xyz/eliza/) to deploy Eliza in one click. This opens Eliza to non-developers and provides the following options to build your agent:
-1. Start with a template
-2. Build characterfile from scratch
-3. Upload pre-made characterfile
-
-Click [here](https://fleek.xyz/eliza/) to get started!
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/your-repo/deep16z/tree/main)
 
 ---
 
-### Community & contact
+### Deploy Deep16z in One Click
 
-- [GitHub Issues](https://github.com/elizaos/eliza/issues). Best for: bugs you encounter using Eliza, and feature proposals.
-- [Discord](https://discord.gg/ai16z). Best for: sharing your applications and hanging out with the community.
+Use [Fleek](https://fleek.xyz/deep16z/) to deploy Deep16z effortlessly. Options include:
+1. Start with a template.
+2. Build a character file from scratch.
+3. Upload a pre-made character file.
+
+Click [here](https://fleek.xyz/deep16z/) to get started!
+
+---
+
+## Community & Contact
+
+- [GitHub Issues](https://github.com/your-repo/deep16z/issues): Report bugs or propose features.
+- [Discord](https://discord.gg/deep16z): Join the community and share your projects.
+
+---
 
 ## Citation
 
-We now have a [paper](https://arxiv.org/pdf/2501.06781) you can cite for the Eliza OS:
+If you use Deep16z in your research, please cite our work:
+
 ```bibtex
-@article{walters2025eliza,
-  title={Eliza: A Web3 friendly AI Agent Operating System},
-  author={Walters, Shaw and Gao, Sam and Nerd, Shakker and Da, Feng and Williams, Warren and Meng, Ting-Chien and Han, Hunter and He, Frank and Zhang, Allen and Wu, Ming and others},
-  journal={arXiv preprint arXiv:2501.06781},
+@article{your2025deep16z,
+  title={Deep16z: Advanced AI Agent Framework with Deepseek Integration},
+  author={Your Name and Collaborators},
+  journal={arXiv preprint arXiv:XXXX.XXXXX},
   year={2025}
 }
 ```
 
+---
+
 ## Contributors
 
-<a href="https://github.com/elizaos/eliza/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=elizaos/eliza" alt="Eliza project contributors" />
+<a href="https://github.com/your-repo/deep16z/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=your-repo/deep16z" alt="Deep16z project contributors" />
 </a>
 
+---
 
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=elizaos/eliza&type=Date)](https://star-history.com/#elizaos/eliza&Date)
+Let me know if you need anything else! 🚀
