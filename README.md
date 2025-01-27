@@ -4,11 +4,6 @@
   <img src="banner.png" alt="Deep16z Banner" width="100%" />
 </div>
 
-<div align="center">
-
-📑 [Technical Report](#) |  📖 [Documentation](#) | 🎯 [Examples](#)
-
-</div>
 
 ---
 
