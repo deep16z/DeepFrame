@@ -1,7 +1,3 @@
-Got it! Here's the updated **Deep16z README** with the **languages** and **star history** sections removed. Clean and focused:
-
----
-
 # Deep16z 🚀
 
 <div align="center">
@@ -16,167 +12,120 @@ Got it! Here's the updated **Deep16z README** with the **languages** and **star 
 
 ---
 
+## 🚀 Quick Start: Initialize Deep16z with Deepseek API
+
+Here’s a quick example to initialize an agent using the **Deepseek API** in **TypeScript**:
+
+```typescript
+import { Deep16zAgent } from 'deep16z';
+
+// Initialize the agent with Deepseek API
+const agent = new Deep16zAgent({
+  apiKey: process.env.DEEPSEEK_API_KEY, // Your Deepseek API key
+  model: 'deepseek-chat',               // Default model
+  apiUrl: 'https://api.deepseek.com',   // Deepseek API endpoint
+});
+
+// Start the agent
+agent.start()
+  .then(() => {
+    console.log('Deep16z agent is running!');
+  })
+  .catch((err: Error) => {
+    console.error('Failed to start agent:', err.message);
+  });
+```
+
+Make sure to set your `DEEPSEEK_API_KEY` in the `.env` file (see below).
+
+---
+
 ## 🚩 Overview
 
-**Deep16z** is a powerful AI agent framework built on top of **Eliza**, enhanced with **Deepseek** integration for advanced conversational capabilities. Whether you're building chatbots, autonomous agents, or document-based AI systems, Deep16z provides the tools and flexibility to create highly intelligent and responsive agents.
-
-<div align="center">
-  <img src="./docs/static/img/deep16z_diagram.png" alt="Deep16z Diagram" width="100%" />
-</div>
+**Deep16z** is a powerful AI agent framework built on **Eliza**, enhanced with **Deepseek** integration for advanced conversational capabilities. It’s designed for building intelligent chatbots, autonomous agents, and document-based AI systems.
 
 ---
 
 ## ✨ Features
 
-- **🤖 Deepseek Integration**: Seamless connection with Deepseek for enhanced conversational intelligence.
-- **🛠️ Multi-Platform Support**: Full-featured Discord, Twitter, and Telegram connectors.
-- **🔗 Model Agnostic**: Works with any model (Llama, Grok, OpenAI, Anthropic, Gemini, etc.).
-- **👥 Multi-Agent Support**: Run multiple agents simultaneously with room-based interactions.
-- **📚 Document Interaction**: Easily ingest and interact with your documents for context-aware responses.
-- **💾 Retrievable Memory**: Persistent memory and document storage for long-term interactions.
-- **🚀 Extensible Architecture**: Create custom actions, clients, and plugins to tailor Deep16z to your needs.
-- **📦 Just Works**: Easy setup and deployment with minimal configuration.
+- **🤖 Deepseek Integration**: Advanced conversational intelligence.
+- **🛠️ Multi-Platform Support**: Discord, Twitter, and Telegram connectors.
+- **🔗 Model Agnostic**: Works with any model (Llama, Grok, OpenAI, etc.).
+- **📚 Document Interaction**: Ingest and interact with documents.
+- **💾 Retrievable Memory**: Persistent memory for long-term interactions.
+- **🚀 Extensible Architecture**: Add custom actions and plugins.
 
 ---
 
 ## 🎯 Use Cases
 
-- **🤖 Chatbots**: Build intelligent chatbots for customer support, entertainment, or personal use.
-- **🕵️ Autonomous Agents**: Create agents that can perform tasks autonomously.
-- **📈 Business Process Automation**: Automate workflows and business processes with AI.
-- **🎮 Video Game NPCs**: Design lifelike NPCs with advanced conversational abilities.
-- **🧠 Trading**: Develop AI-driven trading systems with real-time decision-making.
+- **🤖 Chatbots**: Customer support, entertainment, or personal use.
+- **🕵️ Autonomous Agents**: Perform tasks autonomously.
+- **📈 Business Automation**: Automate workflows and processes.
+- **🎮 Video Game NPCs**: Lifelike NPCs with advanced conversations.
+- **🧠 Trading**: AI-driven trading systems.
 
 ---
 
-## 🚀 Quick Start
+## 🛠️ Setup
 
 ### Prerequisites
 
 - [Python 2.7+](https://www.python.org/downloads/)
-- [Node.js 23+](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+- [Node.js 23+](https://nodejs.org/)
 - [pnpm](https://pnpm.io/installation)
 
-> **Note for Windows Users:** [WSL 2](https://learn.microsoft.com/en-us/windows/wsl/install-manual) is required.
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-repo/deep16z.git
+   cd deep16z
+   ```
+
+2. Copy `.env.example` to `.env` and fill in your Deepseek API key:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+3. Install dependencies and start the agent:
+
+   ```bash
+   pnpm install
+   pnpm build
+   pnpm start
+   ```
 
 ---
 
-### Use the Starter (Recommended)
+## 📄 Example `.env` Configuration
 
-```bash
-git clone https://github.com/your-repo/deep16z-starter.git
-cd deep16z-starter
-cp .env.example .env
-pnpm i && pnpm build && pnpm start
+```env
+# Deepseek Configuration
+DEEPSEEK_API_KEY=your-deepseek-api-key
+DEEPSEEK_API_URL=https://api.deepseek.com
+SMALL_DEEPSEEK_MODEL=deepseek-chat
+MEDIUM_DEEPSEEK_MODEL=deepseek-chat
+LARGE_DEEPSEEK_MODEL=deepseek-chat
+
+# Server & DB Configurations
+CACHE_STORE=database
+SERVER_PORT=3000
+VITE_SERVER_PORT=${SERVER_PORT}
 ```
 
 ---
 
-### Manually Start Deep16z
-
-#### Checkout the Latest Release
-
-```bash
-# Clone the repository
-git clone https://github.com/your-repo/deep16z.git
-
-# Checkout the latest release
-git checkout $(git describe --tags --abbrev=0)
-```
-
-#### Edit the `.env` File
-
-Copy `.env.example` to `.env` and fill in the appropriate values.
-
-```bash
-cp .env.example .env
-```
-
-#### Start Deep16z
-
-```bash
-pnpm i
-pnpm build
-pnpm start
-
-# Clean the project if needed
-pnpm clean
-```
-
----
-
-### Interact via Browser
-
-Once the agent is running, open another terminal and run:
-
-```bash
-pnpm start:client
-```
-
-Follow the URL to chat with your Deep16z agent.
-
----
-
-### Automatically Start Deep16z
-
-Use the start script for automated setup:
-
-```bash
-sh scripts/start.sh
-```
-
-For detailed instructions, see our [Start Script Guide](./docs/docs/guides/start-script.md).
-
----
-
-### Modify Character
-
-1. Open `packages/core/src/defaultCharacter.ts` to modify the default character.
-2. Load custom characters with:
-
-```bash
-pnpm start --characters="path/to/your/character.json"
-```
-
-3. Connect with X (Twitter) by changing `"clients": []` to `"clients": ["twitter"]` in the character file.
-
----
-
-### Additional Requirements
-
-If you encounter errors, install Sharp:
-
-```bash
-pnpm install --include=optional sharp
-```
-
----
-
-### Start Deep16z with Gitpod
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/your-repo/deep16z/tree/main)
-
----
-
-### Deploy Deep16z in One Click
-
-Use [Fleek](https://fleek.xyz/deep16z/) to deploy Deep16z effortlessly. Options include:
-1. Start with a template.
-2. Build a character file from scratch.
-3. Upload a pre-made character file.
-
-Click [here](https://fleek.xyz/deep16z/) to get started!
-
----
-
-## Community & Contact
+## 🤝 Community & Support
 
 - [GitHub Issues](https://github.com/your-repo/deep16z/issues): Report bugs or propose features.
 - [Discord](https://discord.gg/deep16z): Join the community and share your projects.
 
 ---
 
-## Citation
+## 📜 Citation
 
 If you use Deep16z in your research, please cite our work:
 
@@ -196,7 +145,3 @@ If you use Deep16z in your research, please cite our work:
 <a href="https://github.com/your-repo/deep16z/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=your-repo/deep16z" alt="Deep16z project contributors" />
 </a>
-
----
-
-Let me know if you need anything else! 🚀
