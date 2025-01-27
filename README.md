@@ -5,7 +5,7 @@ Got it! Here's the updated **Deep16z README** with the **languages** and **star 
 # Deep16z 🚀
 
 <div align="center">
-  <img src="./docs/static/img/deep16z_banner.png" alt="Deep16z Banner" width="100%" />
+  <img src="banner.png" alt="Deep16z Banner" width="100%" />
 </div>
 
 <div align="center">
