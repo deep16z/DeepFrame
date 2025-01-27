@@ -1,0 +1,54 @@
+import { Logger } from '../utils/Logger';
+
+/**
+ * DeepseekAPI - The bridge to Deepseek's brain 🌉
+ * This class handles all communication with the Deepseek API, sending requests
+ * and receiving responses. Think of it as the postman for AI.
+ */
+export class DeepseekAPI {
+  private apiKey: string;
+  private model: string;
+  private apiUrl: string;
+  private logger: Logger;
+
+  constructor(config: { apiKey: string; model: string; apiUrl: string }) {
+    this.apiKey = config.apiKey;
+    this.model = config.model;
+    this.apiUrl = config.apiUrl;
+    this.logger = new Logger('DeepseekAPI');
+  }
+
+  /**
+   * Generate a response from Deepseek 🤖
+   * This method sends a prompt to the Deepseek API and returns the generated response.
+   * It's like asking a really smart friend for advice.
+   */
+  async generateResponse(prompt: string, context?: string): Promise<string> {
+    this.logger.info(`Generating response for prompt: "${prompt}"`);
+
+    try {
+      const response = await fetch(`${this.apiUrl}/generate`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${this.apiKey}`,
+        },
+        body: JSON.stringify({
+          prompt,
+          model: this.model,
+          context,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`API request failed: ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      return data.response;
+    } catch (error) {
+      this.logger.error('Failed to generate response:', error);
+      throw error;
+    }
+  }
+}
