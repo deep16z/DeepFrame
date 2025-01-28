@@ -1,21 +1,30 @@
-# Deep16z 🚀
-
-<div align="center">
-  <img src="banner.png" alt="Deep16z Banner" width="100%" />
-</div>
-
+Got it! Let’s update the **README** with the new name **DeepFrame**. Here's the revised version:
 
 ---
 
-## 🚀 Quick Start: Initialize Deep16z with Deepseek API
+# DeepFrame 🚀
+
+<div align="center">
+  <img src="deepframe_banner.png" alt="DeepFrame Banner" width="100%" />
+</div>
+
+<div align="center">
+
+📑 [Technical Report](#) |  📖 [Documentation](#) | 🎯 [Examples](#)
+
+</div>
+
+---
+
+## 🚀 Quick Start: Initialize DeepFrame with Deepseek API
 
 Here’s a quick example to initialize an agent using the **Deepseek API** in **TypeScript**:
 
 ```typescript
-import { Deep16zAgent } from 'deep16z';
+import { DeepFrameAgent } from 'deepframe';
 
 // Initialize the agent with Deepseek API
-const agent = new Deep16zAgent({
+const agent = new DeepFrameAgent({
   apiKey: process.env.DEEPSEEK_API_KEY, // Your Deepseek API key
   model: 'deepseek-chat',               // Default model
   apiUrl: 'https://api.deepseek.com',   // Deepseek API endpoint
@@ -24,7 +33,7 @@ const agent = new Deep16zAgent({
 // Start the agent
 agent.start()
   .then(() => {
-    console.log('Deep16z agent is running!');
+    console.log('DeepFrame agent is running!');
   })
   .catch((err: Error) => {
     console.error('Failed to start agent:', err.message);
@@ -37,7 +46,7 @@ Make sure to set your `DEEPSEEK_API_KEY` in the `.env` file (see below).
 
 ## 🚩 Overview
 
-**Deep16z** is a powerful AI agent framework built on **Eliza**, enhanced with **Deepseek** integration for advanced conversational capabilities. It’s designed for building intelligent chatbots, autonomous agents, and document-based AI systems.
+**DeepFrame** is a powerful AI agent framework built on **Eliza**, enhanced with **Deepseek** integration for advanced conversational capabilities. It’s designed for building intelligent chatbots, autonomous agents, and document-based AI systems.
 
 ---
 
@@ -75,8 +84,8 @@ Make sure to set your `DEEPSEEK_API_KEY` in the `.env` file (see below).
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-repo/deep16z.git
-   cd deep16z
+   git clone https://github.com/your-repo/deepframe.git
+   cd deepframe
    ```
 
 2. Copy `.env.example` to `.env` and fill in your Deepseek API key:
@@ -115,18 +124,18 @@ VITE_SERVER_PORT=${SERVER_PORT}
 
 ## 🤝 Community & Support
 
-- [GitHub Issues](https://github.com/your-repo/deep16z/issues): Report bugs or propose features.
-- [Discord](https://discord.gg/deep16z): Join the community and share your projects.
+- [GitHub Issues](https://github.com/your-repo/deepframe/issues): Report bugs or propose features.
+- [Discord](https://discord.gg/deepframe): Join the community and share your projects.
 
 ---
 
 ## 📜 Citation
 
-If you use Deep16z in your research, please cite our work:
+If you use DeepFrame in your research, please cite our work:
 
 ```bibtex
-@article{your2025deep16z,
-  title={Deep16z: Advanced AI Agent Framework with Deepseek Integration},
+@article{your2025deepframe,
+  title={DeepFrame: Advanced AI Agent Framework with Deepseek Integration},
   author={Your Name and Collaborators},
   journal={arXiv preprint arXiv:XXXX.XXXXX},
   year={2025}
@@ -137,6 +146,10 @@ If you use Deep16z in your research, please cite our work:
 
 ## Contributors
 
-<a href="https://github.com/your-repo/deep16z/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=your-repo/deep16z" alt="Deep16z project contributors" />
+<a href="https://github.com/your-repo/deepframe/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=your-repo/deepframe" alt="DeepFrame project contributors" />
 </a>
+
+---
+
+Let me know if you need further adjustments! 🚀
